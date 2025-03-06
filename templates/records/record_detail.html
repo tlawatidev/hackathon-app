@@ -1,0 +1,7 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'base.css' %}">
+
+<h1>Record: {{ object.name }}</h1>
+<p>This record was created at: {{ object.created_at }}.</p>
+<p>This record was last modified at: {{ object.last_modified_at }}.</p>
+<p>Go back to see <a href="{% url 'records:record-list' %}">all records</a>.</p>

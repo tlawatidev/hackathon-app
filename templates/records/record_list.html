@@ -1,0 +1,15 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'base.css' %}">
+
+<h1>All records</h1>
+<ul>
+    {% for record in object_list %}
+        <li>
+            <p>Name: {{ record.name }}</p>
+            <p>Created at: {{ record.created_at }}</p>
+            <p>Last modified at: {{ record.last_modified_at }}</p>
+            <p>Click <a href="{% url 'records:record-detail' record.pk %}">here</a> for more details.</p>
+        </li>
+    {% endfor %}
+</ul>
+<p>Go back to the <a href="{% url 'dashboard' %}">dashboard</a>.</p>

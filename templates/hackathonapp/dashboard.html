@@ -1,0 +1,6 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'base.css' %}">
+
+<h1>Welcome to Hackathon App!</h1>
+<p>There are {{ records_total }} records in total.</p>
+<p>To view a list of all records, click <a href="{% url 'records:record-list' %}">here</a>.</p>
